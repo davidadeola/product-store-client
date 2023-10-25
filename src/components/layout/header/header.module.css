@@ -1,0 +1,13 @@
+.header__container {
+  background-color: blue;
+  padding: 1em;
+  text-align: center;
+}
+
+.header__container a {
+  color: white;
+  text-decoration: none;
+  font-size: larger;
+  font-weight: 700;
+
+}

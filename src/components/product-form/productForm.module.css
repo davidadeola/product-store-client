@@ -1,0 +1,35 @@
+.form__container {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  margin-block: 4em;
+  max-width: 600px;
+  padding: 2em;
+  gap: 1em;
+}
+
+.form__container .input__form {
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+  font-weight: 600;
+  gap: .5em;
+}
+
+.form__container .input__form input {
+  padding: .8em;
+  /* border-radius: .5em; */
+  outline: none;
+  border: 1px solid gray;
+}
+
+.form__container button {
+  background-color: blue;
+  padding: .8em;
+  color: white;
+  font-size: large;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

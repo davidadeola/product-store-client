@@ -1,0 +1,20 @@
+.all__products {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin-inline: auto;
+  padding: 1em;
+}
+
+.all__products li {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1em;
+  justify-content: space-between;
+}

@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import ProductForm from "./components/product-form/productForm";
+import ProductList from "./components/product-list/productList";
+
+const DUMMY_PRODUCTS = [
+  {
+    id: 1,
+    title: "This is the first Title",
+    price: 400,
+  },
+  {
+    id: 2,
+    title: "This is the second Title",
+    price: 450,
+  },
+  {
+    id: 3,
+    title: "This is the third Title",
+    price: 700,
+  },
+  {
+    id: 4,
+    title: "This is the fourth Title",
+    price: 390,
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <ProductForm />
+      <ProductList products={DUMMY_PRODUCTS} />
     </div>
   );
 }
