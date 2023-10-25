@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ProductForm from "./components/product-form/productForm";
 import ProductList from "./components/product-list/productList";
 
@@ -25,10 +26,11 @@ const DUMMY_PRODUCTS = [
 ];
 
 function App() {
+  const [allProducts, setAllProducts] = useState(DUMMY_PRODUCTS);
   return (
     <div className="app">
-      <ProductForm />
-      <ProductList products={DUMMY_PRODUCTS} />
+      <ProductForm products={allProducts} setAllProducts={setAllProducts} />
+      <ProductList products={allProducts} />
     </div>
   );
 }
