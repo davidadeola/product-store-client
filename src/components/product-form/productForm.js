@@ -10,16 +10,17 @@ const ProductForm = ({ products, setAllProducts }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newProducts = setAllProducts([
-      { id: newId, title: title, price: price },
-      ...products,
-    ]);
+    setAllProducts([{ id: newId, title: title, price: price }, ...products]);
     setTitle("");
     setPrice("");
-    console.log(newProducts);
   };
 
-  // const handleTitleChange = (e) => {}
+  const handleTitleChange = (e) => {
+    setTitle(e.target.value);
+  };
+  const handlePriceChange = (e) => {
+    setPrice(e.target.value);
+  };
 
   return (
     <form onSubmit={handleSubmit} className={styles.form__container}>
@@ -29,7 +30,7 @@ const ProductForm = ({ products, setAllProducts }) => {
           Title
           <input
             value={title}
-            onChange={(e) => setTitle(e.target.value)}
+            onChange={handleTitleChange}
             type="text"
             required
           />
@@ -38,7 +39,7 @@ const ProductForm = ({ products, setAllProducts }) => {
           Price
           <input
             value={price}
-            onChange={(e) => setPrice(e.target.value)}
+            onChange={handlePriceChange}
             type="number"
             required
           />

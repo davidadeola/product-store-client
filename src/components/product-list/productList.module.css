@@ -16,5 +16,21 @@
   flex-direction: row;
   align-items: center;
   padding: 1em;
+  border: 1px solid gray;
+  margin: .3em;
+  border-radius: .3em;
   justify-content: space-between;
+}
+
+.all__products li span button {
+  margin-inline: .3em;
+}
+
+.all__products .delete__product {
+  cursor: pointer;
+  padding-inline: .5em;
+  padding-block: .2em;
+  color: red;
+  background-color: white;
+  border: 1px solid gray;
 }

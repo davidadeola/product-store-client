@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="app">
       <ProductForm products={allProducts} setAllProducts={setAllProducts} />
-      <ProductList products={allProducts} />
+      <ProductList products={allProducts} setAllProducts={setAllProducts} />
     </div>
   );
 }
